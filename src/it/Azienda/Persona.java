@@ -2,15 +2,17 @@ package it.Azienda;
 
 public class Persona {
 	
-	private int matricola;	
+	private static int nuovaMatricola = 1;	
+	private int matricola;
 	private String nome;
 	private String cognome;		
 	
-	public Persona(int matricola, String nome, String cognome ) {	
+	public Persona(String nome, String cognome ) {	
 		
-		this.matricola = matricola;
+		this.matricola = nuovaMatricola;
 		this.nome = nome;
 		this.cognome = cognome;
+		nuovaMatricola++;
 		
 	}
 	
@@ -28,14 +30,6 @@ public class Persona {
 	
 	public void setCognome(String cognome) {
 		cognome = cognome;
-	}
-	
-	public int getMatricola() {
-		return matricola;
-	}
-	
-	public void setMatricola(int matricola) {
-		this.matricola = matricola;
 	}
 	
 	
